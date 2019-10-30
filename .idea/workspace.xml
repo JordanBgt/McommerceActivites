@@ -2,24 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d19848f-07e4-4790-9f13-e0075832c7a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/MicroserviceExpeditionApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/dao/ExpeditionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/model/Expedition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/web/controller/ExpeditionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservice-expedition/src/test/java/com/microcommerce/microserviceexpedition/MicroserviceExpeditionApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/beans/ExpeditionBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/proxies/MicroserviceExpeditionProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clientui/src/main/resources/templates/Expedition.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservice-expedition/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/clientui/src/main/java/com/clientui/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-expedition/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-expedition/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/MicroserviceExpeditionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/MicroserviceExpeditionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/model/Expedition.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/model/Expedition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/web/controller/ExpeditionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-expedition/src/main/java/com/microcommerce/microserviceexpedition/web/controller/ExpeditionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-expedition/src/test/java/com/microcommerce/microserviceexpedition/MicroserviceExpeditionApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservice-expedition/src/test/java/com/microcommerce/microserviceexpedition/MicroserviceExpeditionApplicationTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,8 +30,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1SslikUogLBvDtrcwJWL8XLM712" />
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/microservice-expedition" />
@@ -64,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ConfigServerApplication">
+  <component name="RunManager" selected="Spring Boot.ClientUiApplication">
     <configuration name="ClientUiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="clientui" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.clientui.ClientUiApplication" />
@@ -132,8 +136,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572360312597</updated>
-      <workItem from="1572360314027" duration="2018000" />
+      <workItem from="1572360314027" duration="6396000" />
+      <workItem from="1572423187771" duration="846000" />
+      <workItem from="1572424094630" duration="5569000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1572362396558</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572362396558</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Activité première partie&#10;Création class Expedition&#10;Création controller ExpeditionController puis ajout des méthodes pour ajouter une expediton, pour mettre à jour une expédition ou pour récupérer une expedition&#10;Création du repository ExpeditionDao">
+      <created>1572362546702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572362546702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,10 +165,17 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Activité première partie&#10;Création class Expedition&#10;Création controller ExpeditionController puis ajout des méthodes pour ajouter une expediton, pour mettre à jour une expédition ou pour récupérer une expedition&#10;Création du repository ExpeditionDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="Activité première partie&#10;Création class Expedition&#10;Création controller ExpeditionController puis ajout des méthodes pour ajouter une expediton, pour mettre à jour une expédition ou pour récupérer une expedition&#10;Création du repository ExpeditionDao" />
   </component>
 </project>

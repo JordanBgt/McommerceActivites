@@ -27,7 +27,7 @@ public class ExpeditionController {
     }
 
     @GetMapping(value="/expedition/{id}")
-    public Optional<Expedition> recupererUneExpedition(@PathVariable int id){
+    public Optional<Expedition> etatExpedition(@PathVariable int id){
 
         return expeditionDao.findById(id);
     }

@@ -1,20 +1,9 @@
-package com.microcommerce.microserviceexpedition.model;
+package com.clientui.beans;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+public class ExpeditionBean {
 
-@Entity
-public class Expedition {
-
-    @Id
-    @GeneratedValue
     private int id;
-
-    @Column(unique = true)
     private int idCommande;
-
     private int etat;
 
     public int getId() {

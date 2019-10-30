@@ -1,9 +1,11 @@
 package com.clientui.controller;
 
 import com.clientui.beans.CommandeBean;
+import com.clientui.beans.ExpeditionBean;
 import com.clientui.beans.PaiementBean;
 import com.clientui.beans.ProductBean;
 import com.clientui.proxies.MicroserviceCommandeProxy;
+import com.clientui.proxies.MicroserviceExpeditionProxy;
 import com.clientui.proxies.MicroservicePaiementProxy;
 import com.clientui.proxies.MicroserviceProduitsProxy;
 import org.slf4j.Logger;
@@ -13,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,6 +36,9 @@ public class ClientController {
 
     @Autowired
     private MicroservicePaiementProxy paiementProxy;
+
+    @Autowired
+    private MicroserviceExpeditionProxy expeditionProxy;
 
 
     Logger log = LoggerFactory.getLogger(this.getClass());
@@ -124,9 +130,32 @@ public class ClientController {
         return "confirmation";
     }
 
+    @RequestMapping(value = "/expedition/{id}")
+    public String recupererExpedition(@PathVariable int id, Model model){
+        ExpeditionBean expedition = expeditionProxy.etatExpedition(id);
+
+        String etatExpedition = "";
+        switch(expedition.getEtat()){
+            case 0:
+                etatExpedition = "En préparation";
+                break;
+            case 1:
+                etatExpedition = "Expédiée";
+                break;
+            case 2:
+                etatExpedition = "Livrée";
+                break;
+        }
+        model.addAttribute("expedition", expedition);
+        model.addAttribute("etatExpedition", etatExpedition);
+
+        return "Expedition";
+    }
+
     //Génére une serie de 16 chiffres au hasard pour simuler vaguement une CB
     private Long numcarte() {
 
         return ThreadLocalRandom.current().nextLong(1000000000000000L,9000000000000000L );
     }
+
 }
